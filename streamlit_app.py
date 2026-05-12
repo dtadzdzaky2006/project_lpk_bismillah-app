@@ -1,6 +1,23 @@
 import streamlit as st
 
 st.title("🎈 Chemistry Calculation")
-st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
-)
+
+#Input angka
+nun1 = st.number_input("Masukkan angka pertama", value=0.0)
+num2 = st.number_input("Masukkan angka kedua", value=0.0)
+
+#Pilih operasi
+operasi = st.selectbox("Pilih operasi", ["Tambah", "Kurang", "Kali", "Bagi"])
+
+#Tombol hitung
+if st.button("Hitung"):
+    if operasi == "Tambah":
+        hasil = num1 + num2
+    elif operasi == "Kurang":
+         hasil = num1 - num2
+    elif operasi == "Kali":
+         hasil = num1 * num2
+    elif operasi == "Bagi":
+        hasil = num1 / num2 if num2 != 0 else "Tidak bisa dibagi nol"
+
+ st.success(f"Hasil: {hasil}")

@@ -6,10 +6,9 @@ st.title("🎈 Chemistry Calculation")
 nun1 = st.number_input("Masukkan angka pertama", value=0.0)
 num2 = st.number_input("Masukkan angka kedua", value=0.0)
 
-#Pilih operasi
 operasi = st.selectbox("Pilih operasi", ["Tambah", "Kurang", "Kali", "Bagi"])
+    
 
-#Tombol hitung
 if st.button("Hitung"):
     if operasi == "Tambah":
         hasil = num1 + num2

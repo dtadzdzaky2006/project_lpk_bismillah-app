@@ -3,7 +3,7 @@ import streamlit as st
 st.title("🎈 Chemistry Calculation")
 
 #Input angka
-nun1 = st.number_input("Masukkan angka pertama", value=0.0)
+num1 = st.number_input("Masukkan angka pertama", value=0.0)
 num2 = st.number_input("Masukkan angka kedua", value=0.0)
 
 operasi = st.selectbox("Pilih operasi", ["Tambah", "Kurang", "Kali", "Bagi"])
